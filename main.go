@@ -7,6 +7,8 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/firstimedeveloper/finance/auth"
+
 	"github.com/wcharczuk/go-chart"
 
 	"github.com/firstimedeveloper/finance/stock"
@@ -49,6 +51,8 @@ func main() {
 	if err != nil {
 		fmt.Println("Error creating graph", err)
 	}
+
+	auth.Authenticate()
 
 }
 
